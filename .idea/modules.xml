@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/cs160_prog3.iml" filepath="$PROJECT_DIR$/cs160_prog3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="prog3-starter/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/prog3-starter.iml" filepath="$PROJECT_DIR$/.idea/prog3-starter.iml" group="prog3-starter" />
     </modules>
   </component>
 </project>
