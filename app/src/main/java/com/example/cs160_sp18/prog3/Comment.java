@@ -1,6 +1,10 @@
 package com.example.cs160_sp18.prog3;
 
+import com.google.firebase.database.Exclude;
+
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 // custom class made for storing a message. you can update this class
 public class Comment {
@@ -36,6 +40,15 @@ public class Comment {
         } else {
             return "less than an hour";
         }
+    }
+
+    @Exclude
+    public Map<String, Object> toMap() {
+        HashMap<String, Object> result = new HashMap<>();
+        result.put("username", username);
+        result.put("text", text);
+        result.put("date", date);
+        return result;
     }
 }
 

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/landmark_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context="com.example.cs160_sp18.prog3.LandmarkFeedActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/landmark_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryDark"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="Landmarks"
+        app:titleTextColor="@color/white">
+
+        <ImageButton
+            android:id="@+id/pauseButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="200dp"
+            android:background="#00FFFFFF"
+            android:gravity="right"
+            android:scaleType="fitXY"
+            android:alpha="0.8"
+            app:srcCompat="@android:drawable/ic_media_pause" />
+
+        <ImageButton
+            android:id="@+id/refreshButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="16dp"
+            android:background="#00FFFFFF"
+            android:gravity="right"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/refresh_white" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/latitude_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="100dp"
+        android:textIsSelectable="true"
+        android:textSize="@dimen/lat_long_text_size" />
+
+    <TextView
+        android:id="@+id/longitude_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="@dimen/text_margin"
+        android:textIsSelectable="true"
+        android:textSize="@dimen/lat_long_text_size" />
+
+
+    <!-- recycler view -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/landmark_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="56dp"
+        android:transcriptMode="alwaysScroll"
+        app:stackFromEnd="true" />
+
+</RelativeLayout>
